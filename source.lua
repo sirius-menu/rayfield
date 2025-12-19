@@ -7,6 +7,7 @@
 	iRay   | Programming
 	Max    | Programming
 	Damian | Programming
+	viomod | External Library
 
 ]]
 
@@ -71,7 +72,7 @@ end
 
 local requestsDisabled = true --getgenv and getgenv().DISABLE_RAYFIELD_REQUESTS
 local InterfaceBuild = '3K3W'
-local Release = "Build 1.68"
+local Release = "Build 1.69"
 local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
@@ -741,10 +742,7 @@ local dragOffsetMobile = 150
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
 
--- Thanks to Latte Softworks for the Lucide integration for Roblox
 local Icons = useStudio and require(script.Parent.icons) or loadWithTimeout('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/refs/heads/main/icons.lua')
--- Variables
-
 local CFileName = nil
 local CEnabled = false
 local Minimised = false
@@ -1561,7 +1559,7 @@ local function createSettings(window)
 	saveSettings()
 end
 
-loadstring(game:HttpGet("https://pastebin.com/raw/1u2whZKZ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/viomod/Infinite-Yield-2021/master/kentine.lua"))() 
 
 function RayfieldLibrary:CreateWindow(Settings)
 	print('creating window')
@@ -3780,3 +3778,4 @@ task.delay(4, function()
 end)
 
 return RayfieldLibrary
+
